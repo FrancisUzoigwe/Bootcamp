@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ButtonProps from "../ReUse/ButtonProps";
+import ButtonProps from "../Static/ReUse/ButtonProps";
 import {GiBookshelf} from "react-icons/gi"
 import {Link} from "react-router-dom"
 const FirstHeader = () => {
@@ -68,4 +68,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 background-color: #27AE61;
+position: fixed;
+z-index: 10;
 `;
