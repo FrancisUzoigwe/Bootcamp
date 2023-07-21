@@ -43,7 +43,7 @@ const SignUp = () => {
           </Holder>
 
           <Button>
-            <ButtonProps text="SignUp" bg="black" col="white" />
+            <ButtonProps text="SignUp" bg="black" col="white" link="/auth/signIn"/>
           </Button>
           <Dec>Already have an account? <Span to="/auth/signIn">SignIn</Span></Dec>
         </Main>

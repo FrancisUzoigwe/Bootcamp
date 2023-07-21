@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {GiBookshelf} from "react-icons/gi"
 import ButtonProps from "../../Components/ReUse/ButtonProps";
+import {Link} from "react-router-dom"
 
 const SignIn = () => {
   return (
@@ -23,6 +24,7 @@ const SignIn = () => {
           <Button>
             <ButtonProps text="SignIn" col="white" bg="black" link="/home"/>
           </Button>
+          <Dec>Dont't have an account <Li to="/auth/signUp">SignUp</Li></Dec>
         </Main>
       </Container>
     </div>
@@ -30,6 +32,18 @@ const SignIn = () => {
 };
 
 export default SignIn;
+
+
+const Li = styled(Link)`
+margin-left: 5px;
+text-decoration: none;
+
+`;
+
+const Dec = styled.div`
+font-size: 14px;
+margin-top: 20px;
+`;
 
 const Button = styled.div`
 margin-top: 30px;
@@ -85,7 +99,7 @@ const Holder = styled.div`
 
 const Main = styled.div`
   width: 300px;
-  height: 350px;
+  height: 330px;
   border-radius: 10px;
   background: white;
   display: flex;

@@ -34,14 +34,14 @@ export const mainRoutes = createBrowserRouter([
     ],
   },
   {
-    element: <HomeLayout/>,
+    element: <HomeLayout />,
     path: "/home",
     children: [
-        {
-            index: true,
-            element: <HomeScreen/>,
-            path: "/home"
-        }
-    ]
-  }
+      {
+        index: true,
+        element: <HomeScreen />,
+        path: "/home",
+      },
+    ],
+  },
 ]);
