@@ -19,7 +19,6 @@ const LandingPage = () => {
           <Second>
             <SecondMain>
               <Cat>View Categories</Cat>
-              <CatHold></CatHold>
             </SecondMain>
           </Second>
         </Main>
@@ -29,11 +28,7 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
-const CatHold = styled.div`
-width: 100%;
-height: auto;
-display: flex;
-`;
+
 
 const Cat = styled.div`
 font-size: 18px;
@@ -48,13 +43,15 @@ height: auto;
 
 const Second = styled.div`
 width: 100%;
-height: 100vh;
-background: orange;
+height: 70vh;
+background: black;
+color: white;
 `;
 
 const SmallText = styled.div`
   margin-top: 20px;
   color: white;
+  text-align: center;
 
   @media screen and (max-width: 900px) {
     font-size: 20px;
@@ -130,4 +127,5 @@ const Container = styled.div`
   height: auto;
   display: flex;
   justify-content: center;
+  background-color: black;
 `;

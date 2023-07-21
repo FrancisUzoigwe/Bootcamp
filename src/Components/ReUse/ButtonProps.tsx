@@ -8,14 +8,14 @@ interface iBut {
   bg?: string;
   hbg?: string;
   hcol?: string;
-  link?: string;
+  link?: any;
   ml?: string;
   mr?: string;
 }
 const ButtonProps: React.FC<iBut> = ({ bg, hbg, col, text, hcol, link , ml, mr}) => {
   return (
     <div>
-      <Button bg={bg!} hbg={hbg!} col={col!} hcol={hcol!} to={link!} ml={ml!} mr={mr!}>
+      <Button bg={bg!} hbg={hbg!} col={col!} hcol={hcol!} ml={ml!} mr={mr!} to={link!}>
         {text}
       </Button>
     </div>

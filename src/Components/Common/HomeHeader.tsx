@@ -1,36 +1,13 @@
-import styled from "styled-components";
-import ButtonProps from "../ReUse/ButtonProps";
-import {GiBookshelf} from "react-icons/gi"
+import styled from 'styled-components'
 import {Link} from "react-router-dom"
-import { useState } from "react";
-const FirstHeader = () => {
+import ButtonProps from '../ReUse/ButtonProps'
+import {GiBookshelf} from "react-icons/gi"
 
-const [scroll, setScroll] = useState<Boolean>(false)
-const onScroll = () => {
-  if(window.scrollY >= 60) {
-    setScroll(true)
-  }else{
-    setScroll(false)
-  }
-}
-window.addEventListener("scroll", onScroll)
 
+const HomeHeader = () => {
   return (
     <div>
-      {
-        scroll? <Container h="#27AE61">
-        <Main>
-            <LogoHold to="/home">
-                <Logo><GiBookshelf size={30} color="green"/></Logo>
-                <Logotext>Summarit</Logotext>
-            </LogoHold>
-            <CTA>
-                <ButtonProps text="SignIn" col="white" mr="5px" hcol="black" link="/auth/signIn"/>
-                <ButtonProps text="SignUp" bg="white" col="blue" hcol="black" link="/auth/signUp"/>
-            </CTA>
-        </Main>
-      </Container>
-      : <Container h="transperent">
+      <Container h="lightgreen">
       <Main>
           <LogoHold to="/home">
               <Logo><GiBookshelf size={30} color="green"/></Logo>
@@ -41,13 +18,12 @@ window.addEventListener("scroll", onScroll)
               <ButtonProps text="SignUp" bg="green" col="white" hcol="blue" link="/auth/signUp"/>
           </CTA>
       </Main>
-    </Container> }
+    </Container>
     </div>
   )
 }
 
-export default FirstHeader
-
+export default HomeHeader
 
 const CTA = styled.div`
 display: flex;
